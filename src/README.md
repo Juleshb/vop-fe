@@ -1,0 +1,1 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3e284d86-3526-448f-a15b-288f6017c3b4/deploy-status)](https://app.netlify.com/sites/jules-hb-250/deploys)
