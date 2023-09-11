@@ -6,7 +6,7 @@ import Accordion from "./Accordion";
 const Teacher = () => {
   return (
     <div className="section" id="teacher">
-      <div className="grid sm:grid-cols-2 place-items-center gap-8">
+      {/* <div className="grid sm:grid-cols-2 place-items-center gap-8">
         <div className="pl-5">
           <div className="font-bold sm:text-[1.875rem] text-[1.5rem] mb-5">
             Become <span className="text-Teal">An Instructor</span> <br /> of
@@ -43,9 +43,9 @@ const Teacher = () => {
         <div className="p-4 md:w-3/4">
           <img src={teacher2} alt="" />
         </div>
-      </div>
-      <div className="text-center my-8 font-bold sm:text-[1.875rem] text-[1.5rem]">
-        Frequently <span className="text-Teal">Asked Questions</span>
+      </div> */}
+      <div className="text-center my-8 font-bold sm:text-[1.875rem] text-[1.5rem]">My-
+       <span className="text-Teal">Skills</span>
       </div>
       <div className="mt-12 max-w-[700px] mx-auto">
         {accordions.map((accordion) => {

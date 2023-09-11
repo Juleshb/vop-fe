@@ -53,7 +53,7 @@ const Home = () => {
         </div>
       </div>
       <div>
-        <br/>
+        <br/> <br/> <br/>
         <p className="text-center text-xl">
           I am collaborated with{" "}
           <span className="text-Teal">

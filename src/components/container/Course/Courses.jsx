@@ -27,10 +27,14 @@ const Courses = () => {
           Top <span className="text-Teal">Projects</span> 
         </div>
         <p className="text-sm text-gray leading-7 max-w-[700px] mx-auto">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-          tempora illo laborum ex cupiditate tenetur doloribus non velit atque
-          amet repudiandae ipsa modi numquam quas odit optio, totam voluptate
-          sit! Lorem ipsum dolor sit amet.
+        I'm excited to introduce a range of services that can empower your business to reach new
+         heights. With a passion for innovation and a commitment to delivering results, I offer
+          a suite of solutions designed to address your unique needs and challenges.
+
+          <br />
+          Running a successful business comes with its share of challenges, from establishing 
+          a strong online presence to optimizing internal processes for efficiency. My services are
+           meticulously crafted to help you navigate these challenges and harness untapped potential.
         </p>
       </div>
       <motion.div
@@ -43,7 +47,9 @@ const Courses = () => {
           return <Categories key={category.id} {...category} />;
         })}
       </motion.div>
-      <div className="text-xl font-bold mt-32">Most Popular Courses</div>
+      <br />
+      <br />
+      <div className=" text-center sm:text-3xl text-2xl font-bold mb-5 ">Most popular <span className="text-Teal">project I worked on</span></div>
       <div className="mt-12 overflow-x-hidden w-full  relative">
         <div className="flex gap-8 md:w-full sm:w-[170%] xs:w-[340%] w-[480%] animate-slide">
           {courses.map((course) => {
