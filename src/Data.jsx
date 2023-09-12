@@ -28,7 +28,7 @@ export const navLinks = [
   {
     id: 2,
     href: "about",
-    link: "About",
+    link: "About Me",
   },
   {
     id: 3,
@@ -74,75 +74,38 @@ export const courses = [
   {
     id: 1,
     image: courses1,
-    category: "Web Design",
-    title: "The Complete Web Design Course",
-    rating: 4.9,
-    participants: 500,
-    price: 105,
+    category: "PHANTOM APP ",
+    title: " Is project hellp passengers to track buses movement",
+    
   },
   {
     id: 2,
     image: courses2,
-    category: "Web Development",
-    title: "FullStack Web Development Course",
-    rating: 4.8,
-    participants: 700,
-    price: 125,
+    category: "Discipline CONNECT",
+    title: "Software helps to track Disciplene on High scools",
+   
   },
   {
     id: 3,
     image: courses3,
-    category: "Web Development",
-    title: "Python Beginner to Advanced Course",
-    rating: 4.9,
-    participants: 300,
-    price: 99,
+    category: "Tega Bus",
+    title: "is Software used to book bus ticket",
+    
   },
   {
     id: 4,
     image: courses4,
     category: "Web Design",
-    title: "UI/UX Design Crazy Course With Harrys",
-    rating: 4.7,
-    participants: 600,
-    price: 85,
+    title: "UI/UX Design ",
+    
   },
   {
     id: 5,
     image: courses5,
-    category: "AI Development",
-    title: "AI Development With Python (complete beginner course)",
-    rating: 4.9,
-    participants: 500,
-    price: 105,
+    category: "Finance MS",
+    title: "Software used to manage finance transactions",
   },
-  {
-    id: 6,
-    image: courses6,
-    category: "Web Design",
-    title: "The Complete Web Design Course",
-    rating: 4.9,
-    participants: 500,
-    price: 105,
-  },
-  {
-    id: 7,
-    image: courses7,
-    category: "Web Design",
-    title: "The Complete Web Design Course",
-    rating: 4.9,
-    participants: 500,
-    price: 105,
-  },
-  {
-    id: 8,
-    image: courses8,
-    category: "Web Design",
-    title: "The Complete Web Design Course",
-    rating: 4.9,
-    participants: 500,
-    price: 105,
-  },
+ 
 ];
 
 export const logos = [logo1, logo2, logo3, logo4, logo5, logo6];
@@ -150,18 +113,27 @@ export const logos = [logo1, logo2, logo3, logo4, logo5, logo6];
 export const accordions = [
   {
     id: 1,
-    title: "What is Skillex?",
+    title: "Front-end Development",
+    description: "I am an experienced frontend developer skilled in React, Redux, Tailwind, TypeScript  HTML5, CSS3, Sass, Vue.js, WordPress and more. I have a strong understanding of these technologies and have delivered high-quality projects using them.",
   },
   {
     id: 2,
-    title: "What can I learn from Skillex?",
+    title: "Back-end Development",
+    description: "I am an experienced in Node.js backend developer with expertise in Express and database integration, PHP, Postgres, Laravel, MySQL,Yii and more. I have a strong understanding of the core concepts and ability to build robust, scalable applications.",
   },
   {
     id: 3,
-    title: "Can I teach on Skillex?",
+    title: "Mobile Developer",
+    description: "I have comprehensive knowledge in React Native, a framework for cross-platform mobile app development. My expertise includes building apps, using widgets, streams, animations, APIs and backend services, stateful/stateless widgets, architecture patterns, Dart and Flutter CLI. I am confident in delivering top-notch results in any React Native project.",
   },
   {
     id: 4,
-    title: "What is included in my Skillex membership?",
+    title: "UI/UX Design:",
+    description: "Figma, Piktochart, Adobe Photoshop, AI, AAE",
+  },
+  {
+    id: 5,
+    title: "Tools and Platform",
+    description: " Git, Github, Heroku, Netlify, Firebase, Trello",
   },
 ];
