@@ -27,7 +27,7 @@ const Home = () => {
         <div>
           <div className="font-bold text-xs text-Teal mb-4">
             {" "}
-           Let introduce myself
+           {/* Let introduce myself */}
           </div>
           <div className="sm:text-[2.5rem] text-[1.825rem] font-bold">
             I am Jules <br /> HABARUREMA,<br /> Full Stack Software Developer .
