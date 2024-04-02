@@ -4,6 +4,7 @@ import { HiMenuAlt1, HiX } from "react-icons/hi";
 import MobileNavLinks from "./MobileNavLinks";
 import NavLink from "./NavLink";
 import { motion } from "framer-motion";
+import { Icon } from '@iconify/react';
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [active, setActive] = useState(null);
@@ -31,8 +32,8 @@ const Navbar = () => {
               className="text-3xl sm:hidden cursor-pointer"
               onClick={() => setToggle(true)}
             />
-            <div className="text-xl text-Teal uppercase tracking-wide font-bold">
-              Jules HB 250
+            <div className="text-xl text-Teal uppercase flex tracking-wide font-bold">
+            <Icon icon="bxs:book-add" /> <span className="text-black">New Singers</span>
             </div>
           </div>
           <div className="sm:flex items-center hidden">
@@ -41,7 +42,7 @@ const Navbar = () => {
             })}
           </div>
           <button className="py-3 px-6 font-bold text-sm border border-solid rounded-lg border-gray">
-            Hire me. 
+            Be apart of us 
           </button>
           {toggle && (
             <motion.div

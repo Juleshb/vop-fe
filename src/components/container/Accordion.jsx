@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
 import { motion, AnimatePresence } from "framer-motion";
+import { Icon } from '@iconify/react';
 const Accordion = ({ id, title, description}) => {
   const [activeIndex, setActiveIndex] = useState(null);
   const handleClick = (id) => {
@@ -10,14 +11,14 @@ const Accordion = ({ id, title, description}) => {
     <div className="pb-8">
       <div className="flex items-center justify-between">
         <div className="sm:text-xl text-base font-bold">{title}</div>
-        {/* <BsChevronDown
+        <BsChevronDown
           className={`${
             id === activeIndex ? "rotate-180" : "rotate-0"
           } cursor-pointer transition-all duration-300`}
           onClick={() => handleClick(id)}
-        /> */}
+        />
       </div>
-      {/* <AnimatePresence>
+      <AnimatePresence>
         {id === activeIndex && (
           <motion.div
             initial={{ height: 0 }}
@@ -28,14 +29,12 @@ const Accordion = ({ id, title, description}) => {
             className="pt-4"
           >
             <div className="text-sm leading-7 text-gray">
-             {description}
+              <Icon icon="fluent:timer-12-filled" />{description}
             </div>
           </motion.div>
         )}
-      </AnimatePresence> */}
-      <div className="text-sm leading-7 text-gray">
-             {description}
-            </div>
+      </AnimatePresence>
+      
     </div>
   );
 };

@@ -1,7 +1,8 @@
 import React from "react";
-import hero from "../../assets/hero.png";
-import { logos } from "../../Data";
-import { motion } from "framer-motion";
+// import hero from "../../assets/hero.png";
+// import { logos } from "../../Data";
+// import { motion } from "framer-motion";
+import SlideShow from './SlideShow';
 const Home = () => {
   const container = {
     hidden: {
@@ -21,58 +22,45 @@ const Home = () => {
     hidden: { y: 20, opacity: 0 },
     visible: { y: 0, opacity: 1 },
   };
+
+
+  
+
   return (
     <div className="section" id="home">
       <div className="md:flex items-center justify-center">
+        
+       
         <div>
-          <div className="font-bold text-xs text-Teal mb-4">
-            {" "}
-           {/* Let introduce myself */}
+          <div className="font-bold text-xs text-Teal ">
+          <p className="text-sm leading-7 text-gray max-w-sm">
+          New singers family
+          </p>
           </div>
+
+          
           <div className="sm:text-[2.5rem] text-[1.825rem] font-bold">
-            I am Jules <br /> HABARUREMA,<br /> Full Stack Software Developer .
+            FOLLOWING JESUS <br /> WHERE WE ARE<br /> 
           </div>
           <p className="text-sm leading-7 text-gray max-w-sm">
-          I am software Developer,
-          I am interested in back-end & front-end.
-          I am Product Designer with 5 years experience,
-          focusing in User Interface and User Experience.
-          I am also a proud dog dad, and a board game enthusiast.
+         Sing to Him, sing praises to Him! tell of all his wondrous worked Glory in his holly name.
           </p>
           <div className="mt-6">
             <button className="px-6 py-3 font-bold text-white bg-Teal rounded-lg mr-4 text-sm">
-              Get my Resume
+              Be part of us
             </button>
             <button className="px-6 py-3 font-bold border border-solid border-gray rounded-lg text-sm">
-              Hire me.
+              Read more
             </button>
           </div>
         </div>
         <div className="md:w-[60%]">
-          <img src={hero} alt="" />
+      
+      <SlideShow />
+  
         </div>
       </div>
-      <div>
-        <br/> <br/> <br/>
-        <p className="text-center text-xl">
-          I am collaborated with{" "}
-          <span className="text-Teal">
-            different software companies
-          </span>
-        </p>
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="visible"
-          className="flex items-center justify-center flex-wrap gap-8 p-2"
-        >
-          {logos.map((logo, index) => (
-            <motion.div variants={item} className="w-28" key={index}>
-              <img src={logo} alt="" className="w-full object-cover" />
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
+ 
     </div>
   );
 };

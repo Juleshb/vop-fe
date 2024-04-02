@@ -44,10 +44,10 @@ const Teacher = () => {
           <img src={teacher2} alt="" />
         </div>
       </div> */}
-      <div className="text-center my-8 font-bold sm:text-[1.875rem] text-[1.5rem]">My-
-       <span className="text-Teal">Skills</span>
+      <div className="text-center my-8 font-bold sm:text-[1.875rem] text-[1.5rem]">Rehearsal 
+       <span className="text-Teal">Hours</span>
       </div>
-      <div className="mt-12 max-w-[700px] mx-auto">
+      <div className="mt-12 max-w-[700px] mx-auto text-Teal border border-solid rounded-lg border-Teal p-4">
         {accordions.map((accordion) => {
           return <Accordion key={accordion.id} {...accordion} />;
         })}

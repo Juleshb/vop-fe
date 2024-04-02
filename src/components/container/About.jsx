@@ -1,5 +1,5 @@
 import React from "react";
-import about from "../../assets/About.jpg";
+import about from "../../assets/vop.jpeg";
 
 const About = () => {
   return (
@@ -10,17 +10,14 @@ const About = () => {
         </div>
         <div>
           <div className="font-bold sm:text-[1.875rem] text-[1.5rem] mb-5">
-          I like<br />To {" "}
-            <span className="text-Teal">Collaborate</span>
+          Welcome to 
+            <span className="text-Teal">New Singers </span>
+            Family
           </div>
           <p className="text-sm text-gray leading-7 mb-4">
-          I'm passionate about the power of teamwork to drive innovation and success. 
-          As a Software developer with a strong collaborative mindset, I believe that the synergy 
-          created when individuals with diverse skills come together is unparalleled.<br />
-          I'm excited to bring my collaborative spirit to your projects. If you're looking for a team player who is motivated by collective success and who can contribute valuable skills, let's connect. Together, we can turn ideas into impactful realities.
-          </p>
+          New,Singers SDA Rwandan Gospel Choir Based at Kigali Bilingual Church. Started in CAG (Collège adventiste de Gitwe) in 1984. We are Glad to have each other.</p>
           <button className="py-3 px-6 text-sm border border-solid border-gray rounded-lg font-bold">
-          Let's Collaborate
+          Be part of us
           </button>
         </div>
       </div>

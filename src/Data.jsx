@@ -28,20 +28,25 @@ export const navLinks = [
   {
     id: 2,
     href: "about",
-    link: "About Me",
+    link: "About",
   },
   {
     id: 3,
-    href: "courses",
-    link: "Projects",
+    href: "Store",
+    link: "Store",
   },
   {
     id: 4,
-    href: "teacher",
-    link: "Skills",
+    href: "Event",
+    link: "Event",
   },
   {
     id: 5,
+    href: "Gallery",
+    link: "Gallery",
+  },
+  {
+    id: 6,
     href: "contact",
     link: "Contact",
   },
@@ -113,27 +118,13 @@ export const logos = [logo1, logo2, logo3, logo4, logo5, logo6];
 export const accordions = [
   {
     id: 1,
-    title: "Front-end Development",
-    description: "I am an experienced frontend developer skilled in React, Redux, Tailwind, TypeScript  HTML5, CSS3, Sass, Vue.js, WordPress and more. I have a strong understanding of these technologies and have delivered high-quality projects using them.",
+    title: "Saturday",
+    description: "02:00 pm to 06:00 pm",
   },
   {
     id: 2,
-    title: "Back-end Development",
-    description: "I am an experienced in Node.js backend developer with expertise in Express and database integration, PHP, Postgres, Laravel, MySQL,Yii and more. I have a strong understanding of the core concepts and ability to build robust, scalable applications.",
+    title: "Thursday",
+    description: "05:00 pm to 07:00 pm",
   },
-  {
-    id: 3,
-    title: "Mobile Developer",
-    description: "I have comprehensive knowledge in React Native, a framework for cross-platform mobile app development. My expertise includes building apps, using widgets, streams, animations, APIs and backend services, stateful/stateless widgets, architecture patterns, Dart and Flutter CLI. I am confident in delivering top-notch results in any React Native project.",
-  },
-  {
-    id: 4,
-    title: "UI/UX Design:",
-    description: "Figma, Piktochart, Adobe Photoshop, AI, AAE",
-  },
-  {
-    id: 5,
-    title: "Tools and Platform",
-    description: " Git, Github, Heroku, Netlify, Firebase, Trello",
-  },
+  
 ];
