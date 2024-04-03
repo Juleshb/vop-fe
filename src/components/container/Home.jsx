@@ -2,6 +2,7 @@ import React from "react";
 // import hero from "../../assets/hero.png";
 // import { logos } from "../../Data";
 // import { motion } from "framer-motion";
+import { Icon } from '@iconify/react';
 import SlideShow from './SlideShow';
 const Home = () => {
   const container = {
@@ -61,6 +62,31 @@ const Home = () => {
        
       </div>
       <hr className="my-6 border-t border-Teal " />
+
+      <div>
+        <br/> <br/> <br/>
+        <div className="text-center text-xl">
+        <button className="mt-4 px-4 py-3 bg-white text-Teal rounded-lg hover:bg-Teal hover:text-white border border-Teal focus:outline-none focus:ring focus:ring-Teal focus:ring-opacity-50 items-center flex">
+        <Icon icon="iconoir:hand-cash" /> DONATE
+          </button>
+        </div>
+
+       
+        {/* <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          className="flex items-center justify-center flex-wrap gap-8 p-2"
+        >
+          {logos.map((logo, index) => (
+            <motion.div variants={item} className="w-28" key={index}>
+              <img src={logo} alt="" className="w-full object-cover" />
+            </motion.div>
+          ))}
+        </motion.div> */}
+      </div>
+
+      {/* <hr className="my-6 border-t border-Teal " /> */}
     </div>
   );
 };

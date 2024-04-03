@@ -41,7 +41,9 @@ const Navbar = () => {
               return <NavLink key={navLink.id} {...navLink} />;
             })}
           </div>
-          
+          <button className="font-bold text-Teal text-3xl border border-solid rounded-lg border-Teal">
+          <Icon icon="ic:outline-shopify" />
+          </button>
           {toggle && (
             <motion.div
               initial={{ x: -500, opacity: 0 }}
