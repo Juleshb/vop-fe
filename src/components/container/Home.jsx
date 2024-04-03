@@ -27,7 +27,7 @@ const Home = () => {
   
 
   return (
-    <div className="section" id="home">
+    <div className="section  my-12" id="home">
       <div className="md:flex items-center justify-center">
         
       <div className="md:w-[60%]">
@@ -60,7 +60,7 @@ const Home = () => {
         </div>
        
       </div>
- 
+      <hr className="my-6 border-t border-Teal " />
     </div>
   );
 };
