@@ -30,7 +30,11 @@ const Home = () => {
     <div className="section" id="home">
       <div className="md:flex items-center justify-center">
         
-       
+      <div className="md:w-[60%]">
+      
+      <SlideShow />
+  
+        </div>
         <div>
           <div className="font-bold text-xs text-Teal ">
           <p className="text-sm leading-7 text-gray max-w-sm">
@@ -54,11 +58,7 @@ const Home = () => {
             </button>
           </div>
         </div>
-        <div className="md:w-[60%]">
-      
-      <SlideShow />
-  
-        </div>
+       
       </div>
  
     </div>
