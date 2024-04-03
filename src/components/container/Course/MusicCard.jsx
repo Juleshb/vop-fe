@@ -53,9 +53,8 @@ const MusicCard = ({ album }) => {
         className="w-full cursor-pointer"
         src={album.cover}
         alt={album.title}
-        onClick={() => setShowTrackList(!showTrackList)}
       />
-      {showTrackList && (
+      
         <div>
           <div className="px-6 py-4">
             <div className="font-bold text-xl text-Teal mb-2">{album.title}</div>
@@ -106,7 +105,7 @@ const MusicCard = ({ album }) => {
             </div>
           </div>
         </div>
-      )}
+     
     </div>
   );
 };
