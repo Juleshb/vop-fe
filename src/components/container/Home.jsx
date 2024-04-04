@@ -1,10 +1,12 @@
-import React from "react";
+
 // import hero from "../../assets/hero.png";
 // import { logos } from "../../Data";
 // import { motion } from "framer-motion";
 import DonatePopup from './DonatePopup';
 import { Icon } from '@iconify/react';
 import SlideShow from './SlideShow';
+import Navbar from "../Navbar/Navbar";
+import React, { useState } from "react";
 const Home = () => {
   const container = {
     hidden: {
@@ -26,9 +28,15 @@ const Home = () => {
   };
 
 
-  
+  const [cartItems, setCartItems] = useState([]);
+
+  const addToCart = (item) => {
+    setCartItems([...cartItems, item]);
+  };
 
   return (
+    <div className="font-Poppins bg-white">
+      <Navbar cartItems={cartItems} />
     <div className="section  my-12" id="home">
       <div className="md:flex items-center justify-center">
         
@@ -86,10 +94,11 @@ const Home = () => {
       {/* <hr className="my-6 border-t border-Teal " /> */}
       <div className="text-center  items-center justify-center place-items-center">
       <div className="text-xl items-center flex flex-wrap justify-center w-full h-auto space-x-4 ">
-      <DonatePopup />
+      <DonatePopup addToCart={addToCart}/>
       </div>
     </div>
     <hr className="my-6 border-t border-Teal " />
+    </div>
     </div>
 
     

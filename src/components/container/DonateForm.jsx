@@ -1,19 +1,22 @@
 import React, { useState } from "react";
 import { Icon } from '@iconify/react';
 
-const DonateForm = () => {
+const DonateForm = ({ addToCart }) => {
   const [donationAmount, setDonationAmount] = useState("");
-  
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here, e.g., send data to backend
-    console.log("Form submitted!");
-    console.log("Donation Amount:", donationAmount);
     
+    // Add donation to cart
+    addToCart({
+      id: Math.random().toString(36).substr(2, 9), // Generate a unique ID for the donation
+      name: "Donation", // Name of the item
+      price: parseFloat(donationAmount), // Convert donation amount to float
+      quantity: 1, // Quantity of the donation (can be adjusted later if needed)
+    });
+
     // Reset form fields
     setDonationAmount("");
-   
   };
 
   return (
@@ -29,7 +32,7 @@ const DonateForm = () => {
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="donationAmount"
-            type="text"
+            type="number" // Use type "number" for donation amount input
             placeholder="Enter donation amount"
             value={donationAmount}
             onChange={(e) => setDonationAmount(e.target.value)}
@@ -41,7 +44,7 @@ const DonateForm = () => {
             className="mt-4 px-4 py-3 bg-white text-Teal rounded-lg hover:bg-Teal hover:text-white border border-Teal focus:outline-none focus:ring focus:ring-Teal focus:ring-opacity-50 items-center flex"
             type="submit"
           >
-           <Icon icon="ph:shopping-cart-bold" /> ADD TO CART
+            <Icon icon="ph:shopping-cart-bold" /> ADD TO CART
           </button>
         </div>
       </form>

@@ -8,10 +8,13 @@ import {
   Footer,
 } from "./components/index";
 
+
+
 function App() {
+
   return (
     <div className="font-Poppins bg-white">
-      <Navbar />
+     
       <Home />
       <About />
       <Courses />

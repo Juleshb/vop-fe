@@ -5,7 +5,10 @@ import MobileNavLinks from "./MobileNavLinks";
 import NavLink from "./NavLink";
 import { motion } from "framer-motion";
 import { Icon } from '@iconify/react';
-const Navbar = () => {
+// import CheckoutCard from "../container/CheckoutCard";
+
+const Navbar = ({ cartItems }) => {
+
   const [toggle, setToggle] = useState(false);
   const [active, setActive] = useState(null);
   useEffect(() => {
@@ -15,6 +18,24 @@ const Navbar = () => {
     window.addEventListener("scroll", scrollActive);
     return () => window.removeEventListener("scroll", scrollActive);
   }, [active]);
+
+  // const [showPopup, setShowPopup] = useState(false);
+
+  // const togglePopup = () => {
+  //   setShowPopup(!showPopup);
+  // };
+
+  // const closePopup = () => {
+  //   setShowPopup(false);
+  // };
+  
+
+  const [showPopover, setShowPopover] = useState(false);
+
+  const togglePopover = () => {
+    setShowPopover(!showPopover);
+  };
+
   return (
     <div
       className={`${
@@ -41,9 +62,39 @@ const Navbar = () => {
               return <NavLink key={navLink.id} {...navLink} />;
             })}
           </div>
-          <button className="font-bold text-Teal text-3xl border border-solid rounded-lg border-Teal">
-          <Icon icon="ic:outline-shopify" />
-          </button>
+          {/* <button  onClick={togglePopup} className="font-bold text-Teal text-3xl border border-solid rounded-lg border-Teal">
+          <Icon icon="ic:outline-shopify" />  {cartItemCount}
+          </button> */}
+
+
+<div className="relative">
+      <button
+        className="flex items-center justify-center relative"
+        onClick={togglePopover}
+      >
+        <Icon icon="ph:shopping-cart-bold" className="text-3xl" />
+        {cartItems.length > 0 && (
+          <span className="absolute top-0 right-0 bg-red-500 text-white rounded-full px-2 py-1 text-xs">{cartItems.length}</span>
+        )}
+      </button>
+      {showPopover && (
+        <div className="absolute top-full right-0 mt-2 w-60 bg-white shadow-lg rounded-lg">
+          {cartItems.length === 0 ? (
+            <p className="p-4 text-sm text-gray-600">Your cart is empty</p>
+          ) : (
+            <ul className="divide-y divide-gray-200">
+              {cartItems.map((item) => (
+                <li key={item.id} className="p-4">
+                  <p className="text-sm font-medium">{item.name}</p>
+                  <p className="text-sm text-gray-600">{item.quantity} x {item.price}</p>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      )}
+    </div>
+
           {toggle && (
             <motion.div
               initial={{ x: -500, opacity: 0 }}
@@ -68,6 +119,31 @@ const Navbar = () => {
           )}
         </div>
       </div>
+
+
+      {/* {showPopup && (
+        <div className="fixed inset-0 flex items-center justify-center ">
+          <div className="bg-white p-6 rounded-lg shadow-xl border-dotted border-2 border-Teal ">
+          
+
+            <h2 className="text-3xl font-bold mb-8 relative">
+              <button
+                className="absolute top-0 right-0  bg-white text-close rounded-lg hover:bg-Teal hover:text-white focus:outline-none focus:ring focus:ring-Teal focus:ring-opacity-50 "
+                onClick={closePopup}
+              >
+                <Icon icon="material-symbols:close" />
+              </button>
+              
+            </h2>
+           
+           
+            <CheckoutCard />
+            
+          </div>
+        </div>
+      )} */}
+
+
     </div>
   );
 };
