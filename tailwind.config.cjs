@@ -14,7 +14,8 @@ module.exports = {
         HummingBird: "#d1f1ee",
         yellow: "#e4d63b",
         Solitude: "#e9e9ea",
-        gray: "#4B4B4C"
+        gray: "#4B4B4C",
+        close: "#e11d48"
       },
       animation: {
         slide: "slide 25s linear infinite"

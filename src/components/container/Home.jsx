@@ -2,6 +2,7 @@ import React from "react";
 // import hero from "../../assets/hero.png";
 // import { logos } from "../../Data";
 // import { motion } from "framer-motion";
+import DonatePopup from './DonatePopup';
 import { Icon } from '@iconify/react';
 import SlideShow from './SlideShow';
 const Home = () => {
@@ -64,12 +65,8 @@ const Home = () => {
       <hr className="my-6 border-t border-Teal " />
 
       <div>
-        <br/> <br/> <br/>
-        <div className="text-center text-xl">
-        <button className="mt-4 px-4 py-3 bg-white text-Teal rounded-lg hover:bg-Teal hover:text-white border border-Teal focus:outline-none focus:ring focus:ring-Teal focus:ring-opacity-50 items-center flex">
-        <Icon icon="iconoir:hand-cash" /> DONATE
-          </button>
-        </div>
+        
+        
 
        
         {/* <motion.div
@@ -87,7 +84,15 @@ const Home = () => {
       </div>
 
       {/* <hr className="my-6 border-t border-Teal " /> */}
+      <div className="text-center  items-center justify-center place-items-center">
+      <div className="text-xl items-center flex flex-wrap justify-center w-full h-auto space-x-4 ">
+      <DonatePopup />
+      </div>
     </div>
+    <hr className="my-6 border-t border-Teal " />
+    </div>
+
+    
   );
 };
 
