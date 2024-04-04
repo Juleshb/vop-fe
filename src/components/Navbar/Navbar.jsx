@@ -36,6 +36,10 @@ const Navbar = ({ cartItems }) => {
     setShowPopover(!showPopover);
   };
 
+  const getTotalAmount = () => {
+    return cartItems.reduce((total, item) => total + (item.quantity * item.price), 0);
+  };
+
   return (
     <div
       className={`${
@@ -69,7 +73,7 @@ const Navbar = ({ cartItems }) => {
 
 <div className="relative">
       <button
-        className="flex items-center justify-center relative"
+        className="flex items-center text-Teal justify-center relative"
         onClick={togglePopover}
       >
         <Icon icon="ph:shopping-cart-bold" className="text-3xl" />
@@ -82,14 +86,26 @@ const Navbar = ({ cartItems }) => {
           {cartItems.length === 0 ? (
             <p className="p-4 text-sm text-gray-600">Your cart is empty</p>
           ) : (
+            <div>
             <ul className="divide-y divide-gray-200">
-              {cartItems.map((item) => (
-                <li key={item.id} className="p-4">
-                  <p className="text-sm font-medium">{item.name}</p>
-                  <p className="text-sm text-gray-600">{item.quantity} x {item.price}</p>
-                </li>
-              ))}
-            </ul>
+                {cartItems.map((item) => (
+                  <li key={item.id} className="p-4">
+                    <p className="text-sm font-medium">{item.name}</p>
+                    <p className="text-sm text-gray-600">{item.quantity} x {item.price}</p>
+                  </li>
+                ))}
+              </ul>
+              <div className="px-4 py-2 bg-gray-100">
+                <p className="text-sm font-medium">Total Amount:</p>
+                <p className="text-lg font-bold text-teal-500">{getTotalAmount()} Fr</p>
+              </div>
+            <button 
+            className="block w-full py-3 px-4 bg-teal-600 text-white rounded-md hover:bg-teal-700 focus:outline-none focus:bg-teal-700 transition duration-300"
+           
+          >
+            Proceed to Checkout
+          </button>
+          </div>
           )}
         </div>
       )}
