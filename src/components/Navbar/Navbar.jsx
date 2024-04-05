@@ -93,9 +93,9 @@ const Navbar = ({ cartItems, updateCartItem, removeCartItem }) => {
                     <p className="text-sm font-medium">{item.name}</p>
                     <div className="flex items-center justify-between">
                       <p className="text-sm text-gray-600">{item.quantity} x {item.price}</p>
-                      <div>
+                      <div className="text-xl">
                         <button onClick={() => updateCartItem(item.id, item.quantity + 1)} className="text-teal-500">+</button>
-                        <button onClick={() => updateCartItem(item.id, item.quantity - 1)} className="text-teal-500 m-2">-</button>
+                        <button onClick={() => updateCartItem(item.id, item.quantity - 1)} className="text-teal-500 m-4">-</button>
                         <button onClick={() => removeCartItem(item.id)} className="text-red-500"><Icon icon="fluent:delete-24-regular" /></button>
                       </div>
                     </div>
