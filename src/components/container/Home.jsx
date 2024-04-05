@@ -34,9 +34,25 @@ const Home = () => {
     setCartItems([...cartItems, item]);
   };
 
+  const updateCartItem = (itemId, newQuantity) => {
+    const updatedItems = cartItems.map((item) => {
+      if (item.id === itemId) {
+        return { ...item, quantity: newQuantity };
+      }
+      return item;
+    });
+    setCartItems(updatedItems);
+  };
+
+  const removeCartItem = (itemId) => {
+    const updatedItems = cartItems.filter((item) => item.id !== itemId);
+    setCartItems(updatedItems);
+  };
   return (
     <div className="font-Poppins bg-white">
-      <Navbar cartItems={cartItems} />
+      <Navbar cartItems={cartItems}
+      updateCartItem={updateCartItem} 
+      removeCartItem={removeCartItem} />
     <div className="section  my-12" id="home">
       <div className="md:flex items-center justify-center">
         
