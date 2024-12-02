@@ -6,7 +6,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      Poppins: "Poppins"
+      Poppins: "Poppins",
     },
     extend: {
       colors: {
@@ -15,23 +15,31 @@ module.exports = {
         yellow: "#e4d63b",
         Solitude: "#e9e9ea",
         gray: "#4B4B4C",
-        close: "#e11d48"
+        close: "#e11d48",
       },
       animation: {
-        slide: "slide 25s linear infinite"
+        slide: "slide 25s linear infinite",
       },
       keyframes: {
         slide: {
-          "0%,100%" : {transform: "translateX(5%)"},
-          "50%": {transform: "translateX(-120%)"}
-        }
-      }
+          "0%, 100%": { transform: "translateX(5%)" },
+          "50%": { transform: "translateX(-120%)" },
+        },
+      },
     },
     screens: {
+      // Existing sizes
       xs: "480px",
       sm: "768px",
       md: "1060px",
+
+      // Added additional sizes
+      xxs: "320px", // Extra small devices
+      lg: "1024px", // Laptops
+      xl: "1280px", // Large desktops
+      "2xl": "1536px", // Extra large screens
+      "3xl": "1920px", // Ultra large screens
     },
   },
   plugins: [],
-}
+};

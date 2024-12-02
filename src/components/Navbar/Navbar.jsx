@@ -19,16 +19,6 @@ const Navbar = ({ cartItems, updateCartItem, removeCartItem }) => {
     return () => window.removeEventListener("scroll", scrollActive);
   }, [active]);
 
-  // const [showPopup, setShowPopup] = useState(false);
-
-  // const togglePopup = () => {
-  //   setShowPopup(!showPopup);
-  // };
-
-  // const closePopup = () => {
-  //   setShowPopup(false);
-  // };
-  
 
   const [showPopover, setShowPopover] = useState(false);
 
@@ -66,10 +56,6 @@ const Navbar = ({ cartItems, updateCartItem, removeCartItem }) => {
               return <NavLink key={navLink.id} {...navLink} />;
             })}
           </div>
-          {/* <button  onClick={togglePopup} className="font-bold text-Teal text-3xl border border-solid rounded-lg border-Teal">
-          <Icon icon="ic:outline-shopify" />  {cartItemCount}
-          </button> */}
-
 
 <div className="relative">
       <button
@@ -142,29 +128,6 @@ const Navbar = ({ cartItems, updateCartItem, removeCartItem }) => {
           )}
         </div>
       </div>
-
-
-      {/* {showPopup && (
-        <div className="fixed inset-0 flex items-center justify-center ">
-          <div className="bg-white p-6 rounded-lg shadow-xl border-dotted border-2 border-Teal ">
-          
-
-            <h2 className="text-3xl font-bold mb-8 relative">
-              <button
-                className="absolute top-0 right-0  bg-white text-close rounded-lg hover:bg-Teal hover:text-white focus:outline-none focus:ring focus:ring-Teal focus:ring-opacity-50 "
-                onClick={closePopup}
-              >
-                <Icon icon="material-symbols:close" />
-              </button>
-              
-            </h2>
-           
-           
-            <CheckoutCard />
-            
-          </div>
-        </div>
-      )} */}
 
 
     </div>

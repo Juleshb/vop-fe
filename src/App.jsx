@@ -1,27 +1,22 @@
-import {
-  Navbar,
-  Home,
-  About,
-  Teacher,
-  Contact,
-  Courses,
-  Footer,
-} from "./components/index";
-
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import Dashboard from "./components/Admin";
+import Login from "./components/login";
+import { AuthProvider } from "./components/context/AuthContext"; 
 
 function App() {
-
   return (
-    <div className="font-Poppins bg-white">
-     
-      <Home />
-      <About />
-      <Courses />
-      <Teacher />
-      <Contact />
-      <Footer />
-    </div>
+    <AuthProvider>
+      <Router>
+        <div className="font-Poppins bg-white">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/admin" element={<Dashboard />} />
+          </Routes>
+        </div>
+      </Router>
+    </AuthProvider>
   );
 }
 
