@@ -6,6 +6,7 @@ import {
     Contact,
     Courses,
     Footer,
+    ImageGallery
   } from "./index";
   
   
@@ -19,6 +20,7 @@ import {
         <About />
         <Courses />
         <Teacher />
+        <ImageGallery />
         <Contact />
         <Footer />
       </div>

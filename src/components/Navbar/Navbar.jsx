@@ -5,6 +5,7 @@ import MobileNavLinks from "./MobileNavLinks";
 import NavLink from "./NavLink";
 import { motion } from "framer-motion";
 import { Icon } from '@iconify/react';
+import Logo from '../../assets/logo.png'
 // import CheckoutCard from "../container/CheckoutCard";
 
 const Navbar = ({ cartItems, updateCartItem, removeCartItem }) => {
@@ -34,7 +35,7 @@ const Navbar = ({ cartItems, updateCartItem, removeCartItem }) => {
     <div
       className={`${
         active ? "shadow-lg bg-white p-4" : ""
-      } fixed w-full top-0 left-0 z-20`}
+      } fixed w-full text-Teal top-0 left-0 z-20`}
     >
       <div>
         <div
@@ -42,13 +43,17 @@ const Navbar = ({ cartItems, updateCartItem, removeCartItem }) => {
             active ? "py-2 transition-all duration-300" : "py-4"
           } container  mx-auto flex items-center justify-between px-2`}
         >
-          <div className="flex items-center gap-4">
+          <div className="flex items-center">
             <HiMenuAlt1
               className="text-3xl sm:hidden cursor-pointer"
               onClick={() => setToggle(true)}
             />
             <div className="text-xl text-Teal uppercase flex tracking-wide font-bold">
-            <Icon icon="bxs:book-add" /> <span className="text-black">New Singers</span>
+            <img
+    src={Logo}
+    className="w-10 h-10 sm:w-24 sm:h-24 md:w-32 md:h-15 lg:w-20 lg:h-20 object-contain"
+    alt="Logo"
+  />
             </div>
           </div>
           <div className="sm:flex items-center hidden">

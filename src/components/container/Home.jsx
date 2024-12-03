@@ -1,12 +1,10 @@
 
-// import hero from "../../assets/hero.png";
-// import { logos } from "../../Data";
-// import { motion } from "framer-motion";
 import DonatePopup from './DonatePopup';
 import { Icon } from '@iconify/react';
-import SlideShow from './SlideShow';
+// import SlideShow from './SlideShow';
 import Navbar from "../Navbar/Navbar";
 import React, { useState } from "react";
+import HeroSectionWithSlideshow from './HeroSection';
 const Home = () => {
   const container = {
     hidden: {
@@ -49,19 +47,20 @@ const Home = () => {
     setCartItems(updatedItems);
   };
   return (
-    <div className="font-Poppins bg-white">
+    <div className="font-Poppins bg-white"  id="home">
       <Navbar cartItems={cartItems}
       updateCartItem={updateCartItem} 
       removeCartItem={removeCartItem} />
-    <div className="section  my-12" id="home">
+      <HeroSectionWithSlideshow />
+    <div className="section">
       <div className="md:flex items-center justify-center">
         
-      <div className="md:w-[60%]">
+      {/* <div className="md:w-[60%]">
       
       <SlideShow />
   
-        </div>
-        <div>
+        </div> */}
+        {/* <div>
           <div className="font-bold text-xs text-Teal ">
           <p className="text-sm leading-7 text-gray max-w-sm">
           New singers family
@@ -83,31 +82,15 @@ const Home = () => {
               Read more
             </button>
           </div>
-        </div>
+        </div> */}
        
       </div>
       <hr className="my-6 border-t border-Teal " />
 
       <div>
         
-        
-
-       
-        {/* <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="visible"
-          className="flex items-center justify-center flex-wrap gap-8 p-2"
-        >
-          {logos.map((logo, index) => (
-            <motion.div variants={item} className="w-28" key={index}>
-              <img src={logo} alt="" className="w-full object-cover" />
-            </motion.div>
-          ))}
-        </motion.div> */}
       </div>
 
-      {/* <hr className="my-6 border-t border-Teal " /> */}
       <div className="text-center  items-center justify-center place-items-center">
       <div className="text-xl items-center flex flex-wrap justify-center w-full h-auto space-x-4 ">
       <DonatePopup addToCart={addToCart}/>

@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import Logo from '../assets/logo.png'
 import AlbumManager from "./Adomin/album";
 import SongManager from "./Adomin/songs";
-
+import GalleryManager from "./Adomin/gallery";
+import EventsManager from "./Adomin/event";
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("General");
 
@@ -15,9 +16,9 @@ const Dashboard = () => {
       case "Songs":
         return <div><SongManager /></div>;
       case "Gallery":
-        return <div>Gallery Content</div>;
+        return <div><GalleryManager /></div>;
       case "Events":
-            return <div>Event Content</div>;
+            return <div><EventsManager /></div>;
       case "Account":
         return <div>Account Content</div>;
       default:
@@ -28,7 +29,7 @@ const Dashboard = () => {
   return (
     <div className="flex h-screen font-Poppins">
       {/* Sidebar */}
-      <div className="flex h-full flex-col bg-white border-r shadow-md xs:w-16 sm:w-20 md:w-64 transition-all">
+      <div className="flex h-full flex-col bg-Teal border-r shadow-md xs:w-16 sm:w-20 md:w-64 transition-all">
         {/* Header */}
         <div className="flex flex-col items-center py-4">
   <img
@@ -47,8 +48,8 @@ const Dashboard = () => {
                 onClick={() => setActiveTab(tab)}
                 className={`w-full flex items-center gap-4 px-4 py-3 text-sm font-medium transition-colors ${
                   activeTab === tab
-                    ? "bg-Teal text-white"
-                    : "text-gray hover:bg-HummingBird hover:text-gray-900"
+                    ? "bg-green-700 text-white"
+                    : "text-white hover:bg-HummingBird hover:text-gray-900"
                 }`}
               >
                 {/* Icon */}
@@ -68,7 +69,7 @@ const Dashboard = () => {
         </ul>
 
         {/* Logout Button */}
-        <button className="w-full mt-auto flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium text-gray hover:bg-Solitude hover:text-gray-900">
+        <button className="w-full mt-auto flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium text-white hover:bg-Solitude hover:text-bg-green-700">
           <span className="material-icons">logout</span>
           <span className="hidden sm:block">Logout</span>
         </button>
