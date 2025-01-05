@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axiosInstance from '../utils/axios'; // Custom axios instance
 
-const BACKEND_BASE_URL = "http://localhost:4500"; // Backend base URL
+const BACKEND_BASE_URL = "http://hblab.rw"; // Backend base URL
 
 const ImageGallery = () => {
   const [images, setImages] = useState([]);

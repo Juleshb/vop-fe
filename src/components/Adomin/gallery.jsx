@@ -13,7 +13,7 @@ const GalleryManager = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(""); // For error messages
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const BACKEND_BASE_URL = "http://localhost:4500";
+  const BACKEND_BASE_URL = "http://hblab.rw";
 
   // Fetch all images
   const fetchImages = async () => {

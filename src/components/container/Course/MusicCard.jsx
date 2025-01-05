@@ -3,8 +3,8 @@ import axiosInstance from "../../utils/axios";
 import { Icon } from "@iconify/react";
 import CoverImage from "../../../assets/Ntwari.jpg"
 
-const BACKEND_BASE_URL = "http://localhost:4500/";
-const BACKEND_BASE_URL_IMAGE = "http://localhost:4500";
+const BACKEND_BASE_URL = "http://hblab.rw/";
+const BACKEND_BASE_URL_IMAGE = "http://hblab.rw";
 
 const AlbumPlaylists = () => {
   const [albums, setAlbums] = useState([]);

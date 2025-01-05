@@ -4,7 +4,7 @@ import Slide from './Slide';
 import { Icon } from '@iconify/react';
 import axiosInstance from '../utils/axios'; // Custom axios instance
 
-const BACKEND_BASE_URL = "http://localhost:4500"; // Backend base URL
+const BACKEND_BASE_URL = "http://hblab.rw"; // Backend base URL
 
 const SlideShow = () => {
   const [slides, setSlides] = useState([]); // Dynamic slides

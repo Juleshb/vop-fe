@@ -21,7 +21,7 @@ const SongManager = () => {
   const audioPlayer = useRef(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const BACKEND_BASE_URL = "http://localhost:4500/";
+  const BACKEND_BASE_URL = "http://hblab.rw/";
 
   // Fetch all songs
   const fetchSongs = async () => {
